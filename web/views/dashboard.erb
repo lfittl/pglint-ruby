@@ -1,0 +1,9 @@
+<ul>
+<% @requests.each do |req| %>
+  <li>
+    <h3><%= req['path'] %></h3>
+    DB: <%= "%0.2fms" % req['duration_db_ms'] %> Views: <%= "%0.2fms" % req['duration_view_ms'] %>
+    <%= URL %>
+  </li>
+<% end %>
+</ul>
